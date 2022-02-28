@@ -1,0 +1,65 @@
+    * {
+        padding: 0px;
+        margin: auto;
+    }
+    
+    .wrapper {
+        height: 1000px;
+        width: 1000px;
+        background-color: aliceblue;
+    }
+    
+    header {
+        height: 50px;
+        width: 1000px;
+        background-color: rgb(0, 118, 221);
+    }
+    
+    nav {
+        height: 100px;
+        width: 1000;
+        background-color: rgb(240, 236, 1);
+    }
+    
+    .content {
+        height: 800px;
+        width: 1000px;
+        background-color: rgb(231, 152, 106);
+    }
+    
+    section {
+        height: 762px;
+        width: 50%;
+        background-color: rgb(235, 5, 5);
+        padding-top: 38px;
+        padding-left: 150px;
+        float: left;
+    }
+    
+    article {
+        height: 360px;
+        width: 70%;
+        background-color: rgb(206, 175, 216);
+        float: left;
+        padding-left: 20px;
+    }
+    
+    article {
+        height: 360px;
+        width: 70%;
+        background-color: rgb(70, 11, 90);
+        float: left;
+    }
+    
+    aside {
+        height: 0px;
+        width: 65%;
+        background-color: rgb(240, 236, 1);
+        float: left;
+    }
+    
+    footer {
+        height: 50px;
+        width: 1000px;
+        background-color: rgb(2, 155, 2);
+    }

@@ -1,0 +1,28 @@
+* {
+    padding: 0px;
+    margin: auto;
+}
+
+.wrapper {
+    height: 1000px;
+    width: 1000px;
+    background-color: aliceblue;
+}
+
+header {
+    height: 50px;
+    width: 1000px;
+    background-color: rgb(0, 118, 221);
+}
+
+section {
+    height: 600px;
+    width: 1000px;
+    background-color: rgb(235, 5, 5);
+}
+
+footer {
+    height: 50px;
+    width: 1000px;
+    background-color: rgb(2, 155, 2);
+}
