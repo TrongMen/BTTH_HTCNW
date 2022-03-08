@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: auto;
+        }
+        .wrapper{
+            height: 800px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+        nav{
+            height: 70px;
+            width: 1089px;
+            background-color: rgb(209, 118, 0);
+        }
+        header{
+            height: 150px;
+            width: 1089px;
+            background-color: rgb(64, 4, 230);
+        }
+        .content{
+            height: 500px;
+            width: 1089px;
+            background-color: rgb(74, 235, 0);
+        }
+        aside{
+            height: 500px;
+            width: 40%;
+            background-color: rgb(255, 1, 1);
+            float: left;
+        }
+        section{
+            height: 480px;
+            width: 58%;
+            background-color: rgb(4, 255, 221);
+            float: left;
+        }
+        footer{
+            height: 100px;
+            width: 1089px;
+            background-color: rgb(0, 0, 0);
+        }
+        .menu li{
+            float: left;
+            height: 100%;
+            width: 150px;
+            list-style: none;
+            text-indent: 16px;
+            background-color: rgb(236, 98, 6);
+        }
+        a{
+            color: blueviolet;
+            text-decoration: none;
+        }
+        .menu li:hover{
+            background-color: aqua;
+        }
+        li:hover>a{
+            color: rgb(22, 104, 175);
+        }
+        .menu li .submenu{
+            display: none;
+        }
+        .menu li:hover .submenu{
+            display: block;
+        }
+        nav span form #txtEmail{
+            padding:2px;
+            margin-right: 3px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="https://www.google.com/">HOME</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <ul class="submenu">
+                    <li><a href="">PHONE</a></li>
+                    <li><a href="">SERVICES</a></li>
+                    <li><a href="">TIVI</a></li>
+                </ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">HELP</a></li>
+            </ul>
+            <span>
+                <form action="dangky.php" method="post">
+                    <label for="Email">Email: </label>
+                    <input type="email" name="txtEmail" id="txtEmail" placeholder="nhap Email" required>
+                    <input type="submit" value="GO" style="border: radius 50%;">
+                </form>
+            </span>
+        </nav>
+        <header></header>
+        <div class="content">
+            <aside>
+                <article><h1>HOAT DONG 1</h1></article>
+                <article><h1>HOAT DONG 2</h1></article>
+                <article><h1>HOAT DONG 3</h1></article>
+            </aside>
+            <section style="margin: 10px">
+                <h1 style="text-align:center;">DANG KY THONG TIN LAM CCCD</h1>
+                <form action="" method="post">
+                    <fieldset>
+                        <legend>Thong tin cua ban</legend>
+                        <label for="lblHoTen">Ho Ten: </label>
+                        <input type="text" name="txtHoTen" id="txtHoTen" required placeholder="Ho Ten"><br> <br>
+                        <label for="lblSCMND">So txtCMND: </label>
+                        <input type="text" name="txtCMND" id="txtCMND" required placeholder="So CMND"><br> <br>
+                        <label for="lblEmail">Dia chi Email:</label>
+                        <input type="email" name="txtEmail" id="txtEmail" required placeholder="Email cua ban"><br> <br>
+                        <label for="lblDC">Dia chi: </label>
+                        <input type="text" name="txtDC" id="txtDC" required placeholder="Noi thuong tru"><br> <br>
+                        <input type="submit" value="Dang ky">
+                    </fieldset>
+                </form>
+            </section>
+            
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>

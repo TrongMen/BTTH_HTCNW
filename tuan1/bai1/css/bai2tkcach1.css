@@ -1,0 +1,57 @@
+* {
+    padding: 0px;
+    margin: auto;
+}
+
+.wrapper {
+    height: 400px;
+    width: 898px;
+    background-color: wheat;
+}
+
+header {
+    height: 150px;
+    width: 898px;
+    background-color: rgb(98, 154, 218);
+}
+
+nav {
+    height: 250px;
+    width: 250px;
+    background-color: teal;
+    float: left;
+}
+
+.content {
+    height: 250px;
+    width: 648px;
+    background-color: blue;
+    float: left;
+}
+
+.content>.left {
+    height: 50px;
+    width: 100px;
+    float: left;
+    background-color: rgb(255, 0, 0);
+}
+
+.content>.top {
+    height: 50px;
+    width: 548px;
+    float: left;
+    background-color: rgb(249, 249, 252);
+}
+
+.content>.mid {
+    height: 190px;
+    width: 548px;
+    background-color: green;
+    position: relative;top:30px;
+    
+}
+
+
+
+
+
