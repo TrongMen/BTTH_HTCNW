@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <style>
+        li{
+            width:150px
+        }
+    </style>
+
+    <script>
+        var i=1;
+        $("myBtn").click(function(){
+            $("#myModal").modal();
+        });
+    </script>
+
+    <script>
+        function KTTen(){
+            var kt=/^[A-Z][a-zA-Z]+(\s[A-Z][a-zA-Z]+)*$/;
+            if($("#txtTen").val()==""){
+                $("#tbTen").html("*Bắt buộc nhập!!");
+                return false;
+            }
+            if(!kt.test($"txtTen").val()){
+                $("#tbTen").html("*Chữ cái đầu của mỗi từ phải viết hoa!!");
+                return false;
+            }
+            $("#tbTen").html("*");
+                return true;
+        };
+        $("#txtTen").blur(KTTen);
+    </script>
+
+    <script>
+        function KTDC(){
+        if($("#txtDC").val()==""){
+                $("#tbDC").html("*Bắt buộc nhập!!");
+                return false;
+            }
+            $("#tbDC").html("*");
+                return true;
+        }
+        $("#txtDC").blur(KTDC);
+    </script>
+
+    <script>
+        function KTNgay(){
+            if($("#txtNgay").val()==""){
+                $("#tbNgay").html("*Bắt buộc nhập!!");
+                return false;
+            }
+            var day=new Date($("txtNgay").val());
+            var today=new Date;
+            today.setDate(today.getDate()+3);
+            if(day<today){
+                $("#tbNgay").html("*Nhập ngày sau ngày hiện tại 3 ngày");
+                return false;
+            }
+            $("#tbNgay").html("*");
+                return true;
+        }
+        $("#txtNgay").blur(KTNgay);
+    </script>
+
+    <script>
+        function KTSDT(){
+            var sdt=/^[0-9]{3}\-\d{4}\-\d{3}$/;
+            if($("#txtSDT").val()==""){
+                $("#tbSDT").html("*Bắt buộc nhập!!");
+                return false;
+            }
+            if(!sdt.test($"txtSDT").val()){
+                $("#tbTen").html("Nhập theo dạng 000-0000-000");
+                return false;
+            }
+            $("#tbSDT").html("*");
+                return true;
+        }
+        $("#txtSDT").blur(KTSDT);
+    </script>
+        
+    <script>
+        function KTMail(){
+            var mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)+(\.\w{2,3})+$/;
+            if($("#txtMail").val()==""){
+                $("#tbMail").html("*Bắt buộc nhập!!");
+                return false;
+            }
+            if(!mail.test($"txtMail").val()){
+                $("#tbTen").html("Nhập đúng định dạng mail");
+                return false;
+            }
+            $("#tbMail").html("*");
+                return true;
+        }
+        $("#txtMail").blur(KTMail);
+    </script>
+    
+    <script>
+        $("#btnSave").click(function(){
+            if(!KTTen()||!KTDC()||!KTNgay()||!KTMail()||!KTSDT()){
+                $("#thongbao").html("*Nhập đúng và đủ thông tin");
+                return false;
+            }
+            var ten=$("#txtTen").val();
+            var diachi=$("#txtDC").val();
+            var ngay=$("#txtNgay").val();
+            var gmail=$("#txtMail").val();
+            var sdt=$("#txtSDT").val();
+            var them="<tr><td>" +(i++)+"</td><td>"+ten+"</td><td>"+diachi+"</td><td>"+ngay+"</td><td>"+mail+"</td><td>"+sdt+"</td><td>";
+            $("table").append(them);
+            $("#myModal").modal("hide");
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <header>
+                    <img src="../Images/Banner.png" width="100%">
+                </header>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12">
+        <nav class="navbar-collapse">
+            <ul class="navbar-nav nav" style="background-color: aqua;">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">ARTICLE</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SERVICES <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                    <a href="#" id="myBtn">Online</a>
+                    </li>
+                </ul>
+            </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <section class="col-md-5">
+                <img src="../Images/left.png" width="100%">
+            </section>
+            <aside class="col-md-7" class="table-responsive">
+                <h2 class="text-danger">Customer Ordered List</h2>
+
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Delivery</th>
+                            <th>Email</th>
+                            <th>Telephone number</th>
+                        </tr>
+                    </table>
+            </aside>
+        </div>
+    </div>
+    <div class="modalfade">
+        <div class="modal-dialog">
+            <div class="modal_content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="text-danger">Customer infomation</h2>
+                </div>
+                <div class="modal-body">
+                    <form role="form-control" class="form-horizontal">
+                        <div id="thongbao" class="text-danger"></div>
+                        <div class="form-group">
+                            <label for="txtTen" class="control-label col-md-3">Customer Name</label>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" id="txtTen">
+                                <span id="tbTen" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtDC" class="control-label col-md-3">Address</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" id="txtDC">
+                                    <span id="tbDC" class="text-danger">*</span>
+                                </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

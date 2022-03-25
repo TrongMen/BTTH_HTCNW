@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function KTTK(){
+            let mau = /^[a-20-9_-]{6,16}$/
+            let tkkt = document.getElementById('txtName').value.trim();
+            if(mau.test(tkkt)==true){
+                spkt.innerText = "*";
+            }else{
+                spkt.innerText ="Bắt buộc nhập kí tự chuỗi đầu tiên"
+            }
+        }
+        
+        function KTMK(){
+            if(==true){
+                ktm.innerText="*"
+            }else{
+                ktm.innerText="Phải có chữ,số ít nhất 6 kí tự"
+            }
+                
+        }
+    </script>
+    
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>
+                Biểu thức chính quy
+            </legend>
+            <label for="lblNhapten">Nhập tên: </label>
+            <input type="text" name="txtName" id="txtName" onblur="return KTTK();"><br>
+            <span id ="spkt" style="color: rgb(27, 226, 9);"></span>
+            <label for="lblNhapmk">Mật khẩu: </label>
+            <input type="text" name="txtMK" id="txtMK"><br>
+            <label for="lblMk">Nhập lại mật khẩu: </label>
+            <input type="text" name="txtMK" id="txtMK"><br>
+        </fieldset>
+    </form>
+    <form action=""method="post">
+        <fieldset>
+            <legend>
+                Thông tin cá nhân
+            </legend>
+            <label for="lblHoten">Họ và tên: </label>
+            <input type="text" name="txtHoten" id="txtHoten"><br>
+            <label for="lblNgaysinh">Ngày sinh: </label>
+            <input type="date" name="bday"><br>
+            <label for="lblGT">Giới tính: </label>
+            <input type="radio" name="gender" value ="nu">Nữ
+            <input type="radio" name="gender" value="nam">Nam
+            <input type="radio" name="gender" value ="khac">Khác <br>
+            <label for="lblDC">Địa chỉ: </label>
+            <input type="text" name="txtDC" id="txtDC"><br>
+            <label for="lblSdt">Số điện thoại: </label>
+            <input type="tel" name="sdt"><br>
+            <label for="lblEmail">Nhập Email:</label>
+            <input type="email" name="email">
+        </fieldset>
+    </form>
+</body>
+</html>

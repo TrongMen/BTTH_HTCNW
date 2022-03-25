@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin:auto;
+}
+body{
+    width: 960px;
+    border: 1px solid rgb(14, 12, 12);
+    color: gray;
+}
+#header{
+    height: 100px;
+    background-color: rgb(80, 80, 223);
+    position: relative;
+    color: rgb(49, 218, 105);
+}
+#header img{
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(7, 117, 117);
+}
+#header h1{
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    background-color: blue;
+}
+#header p{
+    position:absolute;
+    top: 20px;
+    left: 80px;
+}
+#header form{
+    position:absolute;
+    top: 10px;
+    left: 10px;
+}
+.menu-parent{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    display: flex;
+    list-style: none;
+}
+.menu-parent a{
+    color: rgb(219, 152, 152);
+    padding: 10px 20px;
+    display: block;
+    text-decoration:  none;
+    background-color: rgb(39, 59, 240);
+    margin-left: 10px;
+}
+.menu-parent a:hover{
+    color: rgb(17, 67, 233);
+}
+.menu-child{
+    display: none;
+}
+.menu-parent li:hover .menu-child{
+    position: absolute;
+    display: block;
+    margin-left: -40px;
+   
+}
+#header input, header button{
+    background-color: rgb(13, 141, 192);
+    border: 1px solid rgb(83, 83, 230);
+    padding: 5px;
+}
+#header input::-webkit-input-placeholder, #header button{
+    color: rgba(5, 74, 114, 0.384);
+}
+#section{
+    width: 70%;
+    float:left;
+    padding:40px 40px 20px 10px;
+}
+
+#section form{
+    width: 60%;
+    float: left;
+    padding-right: 40px;
+}
+#section input{
+    width: 160px;
+    background-color: rgb(57, 161, 252);
+    border: 1px solid rgb(124, 233, 197);
+}
+#section textarea{
+    background-color: rgb(241, 140, 245);
+    border: 1px solid rgb(11, 86, 129);
+}
+#section form p:first-child{
+    color: red;
+    text-shadow: 4px 4px 5px green;
+}
+#section-right{
+    width: 40%;
+    float:right;
+}
+.form-col{
+    width: 50%;
+    float:left;
+}
+.form-row{
+    clear:both;
+    line-height: 30px;
+}
+#aside{
+    width: 28%;
+    float: right;
+    margin: -350px 1%;
+    background-color: rgb(195, 207, 153);
+    padding: 20px;
+}
+#aside img{
+    width: 230px;
+    margin-top: 20px;
+    border: 1px solid gray;
+    padding:3px;
+}
+p{
+    margin-top: 10px;
+    text-align: justify;
+}
+#aside p:last-child{
+    font-weight: bold;
+    float: right;
+}
