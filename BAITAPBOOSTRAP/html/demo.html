@@ -29,7 +29,7 @@
                 $("#tbTen").html("*Bắt buộc nhập!!");
                 return false;
             }
-            if(!kt.test($"txtTen").val()){
+            if(!kt.test($("txtTen")).val()){
                 $("#tbTen").html("*Chữ cái đầu của mỗi từ phải viết hoa!!");
                 return false;
             }
@@ -77,7 +77,7 @@
                 $("#tbSDT").html("*Bắt buộc nhập!!");
                 return false;
             }
-            if(!sdt.test($"txtSDT").val()){
+            if(!sdt.test($("txtSDT")).val()){
                 $("#tbTen").html("Nhập theo dạng 000-0000-000");
                 return false;
             }
@@ -94,7 +94,7 @@
                 $("#tbMail").html("*Bắt buộc nhập!!");
                 return false;
             }
-            if(!mail.test($"txtMail").val()){
+            if(!mail.test($("txtMail")).val()){
                 $("#tbTen").html("Nhập đúng định dạng mail");
                 return false;
             }

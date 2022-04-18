@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/Ck.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(Document).ready(function(){
+            var i=1;
+            $("#myBtn").click(function(){
+                $("#myModal").modal();
+            });
+
+            function KTTen(){
+                var kt=/^[A-Z][a-zA-Z]+(\s[A-Z][a-zA-Z]+)*$/;
+                if($("#txtTen").val()==""){
+                    $("#tbTen").html("*Bắt buộc nhập!!");
+                    return false;
+                }
+                if(!kt.test($("#txtTen")).val()){
+                    $("#tbTen").html("*Chữ cái đầu của mỗi từ phải viết hoa!!");
+                    return false;
+                }
+                $("#tbTen").html("*");
+                    return true;
+            }
+                $("#txtTen").blur(KTTen);
+
+            function KTMatkhau(){
+                var kt=/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+                if($("#txtMatkhau").val()==""){
+                    $("#tbMatkhau").html("*Bắt buộc nhập!!");
+                    return false;
+                }
+                if(!kt.test($("#txtMatkhau")).val()){
+                    $("#tbMatkhau").html("*Tối thiểu 6 ký tự, ít nhất một chữ cái và một số");
+                    return false;
+                }
+                $("#tbMatkhau").html("*");
+                return true;
+            };
+            $("#txtMatkhau").blur(KTMatkhau);
+
+
+            function KTMail(){
+                var mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)+(\.\w{2,3})+$/;
+                if($("#txtMail").val()==""){
+                    $("#tbMail").html("*Bắt buộc nhập!!");
+                    return false;
+                }
+                if(!mail.test($("#txtMail")).val()){
+                    $("#tbTen").html("Nhập đúng định dạng mail");
+                    return false;
+                }
+                $("#tbMail").html("*");
+                return true;
+            };
+            $("#txtMail").blur(KTMail);
+
+            function KTNamsinh(){
+                if($("#txtNamsinh").val()==""){
+                    $("#tbNamsinh").html("*Bắt buộc nhập!!");
+                    return false;
+                }
+                var namsinh = day.getfullyear()
+                if(namsinh<2002){
+                    $("#tbNamsinh").html("*Nhập năm sinh lớn hơn 2002");
+                    return false;
+                }
+                $("#tbNamsinh").html("*");
+                return true;
+            };
+            $("#txtNamsinh").blur(KTNamsinh);
+        });
+        
+    </script>
+</head>
+<body>
+    <div id="facebook-Bar">
+        <div id="facebook-Frame">
+          <div id="logo"> <a href="https://www.facebook.com/">Facebook</a> </div>
+          <div id="header-main-right">
+            <div id="header-main-right-nav">
+              <form method="post" action="" id="login_form" name="login_form">
+                <table border="0" style="border:none">
+                  <tr>
+                    <td ><input type="text" tabindex="1"  id="email" placeholder="Email hoặc Số điện thoại" name="email" class="inputtext radius1" value=""></td>
+                    <td ><input type="password" tabindex="2" id="pass" placeholder="Mật khẩu" name="pass" class="inputtext radius1" ></td>
+                    <td ><input type="submit" class="fbbutton" name="login" value="Đăng nhập" /></td>
+                  </tr>
+                  <tr>
+                    <td><label>
+                        <input id="persist_box" type="checkbox" name="persistent" value="1" checked="1"/>
+                        <span style="color:#ccc;">Nhớ mật khẩu</span></label></td>
+                    <td><label><a href="" style="color:#ccc; text-decoration:none">Quên mật khẩu?</a></label></td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="loginbox radius">
+        <h2 style="color:#141823; text-align:center;">Đăng ký</h2>
+        <h5 style="color:#141823; text-align:center;">Miễn phí và sẽ luôn như vậy</h5>
+        <div class="loginboxinner radius">
+          <div class="loginform">
+            <form id="login" action="" method="post">
+              <p>
+                <input type="text" id="ho" name="ho" placeholder="Họ" value="" class="radius mini" />
+                <input type="text" id="ten" name="ten" placeholder="Tên" value="" class="radius mini" />
+              </p>
+              <p>
+                <input type="text" id="email" name="email" placeholder="Email đăng nhập" value="" class="radius" />
+              </p>
+              <p>
+                <input type="text" id="remail" name="remail" placeholder="Nhập lại email" class="radius" />
+              </p>
+              <p>
+                <input type="password" id="password" name="password" placeholder="Mật khẩu" class="radius" />
+              </p>
+              <p>
+                  <input type="date" id="nam" name="nam" placeholder="Năm sinh" class="radius">
+              </p>
+              <p>
+                <button class="radius title" name="signup">Đăng ký</button>
+              </p>
+            </form>
+          </div>
+            
+        </div>
+          
+      </div>
+</body>
+</html>

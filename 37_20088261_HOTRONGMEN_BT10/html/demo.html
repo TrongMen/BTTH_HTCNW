@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../css/Ck.css"> -->
+    <link rel="stylesheet" href="../css/style.css">  
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 brand">
+                    <div class="logo">
+                        <img src="../img/Capture.PNG" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 form-login">
+                <div class="row">
+                    <div class="col-md-4 inp-email removepad">
+                        <div class="form-group">
+                            <label for="EmailorSdt"> Email hoặc số điện thoại</label>
+                            <input type="text" class="form-control"  id="EmailorSdt" >
+                        </div>
+                    </div>
+                    <div class="col-md-4 inp-pass removepad">
+                        <div class="form-group">
+                            <label for="pass"> Mật khẩu</label>
+                            <input type="text" class="form-control"  id="pass" >
+                        </div>
+                        <a href="#" class="forgot-pass">Quên mật khẩu?</a>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-login">Đăng nhập</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="modal-fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 style="text-align:center">Đăng ký</h2>
+                        <h5 style="text-align:center" >Miễn phí và sẽ luôn như vậy</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form id="login" action="" method="post">
+                            <div class="form-group">
+                                <div id="thongbao" class="text-danger" style="text-align:center"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="text" id="ho" name="ho" placeholder="Họ" value="" class="radius mini" />
+                                    <input type="text" id="ten" name="ten" placeholder="Tên" value="" class="radius mini" />
+                                    <span id="tbHoten" class="text-danger">*</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="text" id="email" name="email" placeholder="Email đăng nhập" value="" class="radius" />
+                                    <span id="tbEmail" class="text-danger">*</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="text" id="remail" name="remail" placeholder="Nhập lại email" class="radius" />
+                                    <span id="tbRemail" class="text-danger">*</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="password" id="password" name="password" placeholder="Mật khẩu" class="radius" />
+                                    <span id="tbPass" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="text" id="nam" name="nam" placeholder="Năm sinh" class="radius">
+                                    <span id="tbNam" class="text-danger">*</span>
+                                </div>
+                            </div>
+                            
+                            <button class="radius title" name="signup">Đăng ký</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <div class="footer">
+
+    </div>
+</body>
+</html>
